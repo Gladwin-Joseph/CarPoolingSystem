@@ -1,5 +1,4 @@
-# CarPooling-System
-# 🚗 RideShare - Car Pooling System
+# 🚗Car Pooling System
 
 A full-stack carpooling platform connecting drivers and passengers to reduce traffic congestion, lower travel costs, and promote sustainable transportation.
 
@@ -7,7 +6,7 @@ A full-stack carpooling platform connecting drivers and passengers to reduce tra
 
 ## 📋 Quick Overview
 
-RideShare enables drivers to post ride offers and passengers to search and book rides on shared routes. The system prioritizes simplicity, security, and extensibility through proper software architecture and design patterns.
+This Car Pooling System enables drivers to post ride offers and passengers to search and book rides on shared routes. The system prioritizes simplicity, security, and extensibility through proper software architecture and design patterns.
 
 ### Key Features
 
@@ -24,14 +23,13 @@ RideShare enables drivers to post ride offers and passengers to search and book 
 
 | Component | Technology |
 |-----------|------------|
-| **Frontend** | React.js, JavaScript, HTML5, CSS3 |
+| **Frontend** | React.js|
 | **Backend** | Java, Spring Boot |
 | **Database** | PostgreSQL |
 | **Server** | Embedded Tomcat |
 | **Architecture** | MVC + Microservices |
-| **Design Patterns** | Observer, Factory Method, Singleton, Decorator, Strategy, Interceptor, Command |
 | **Version Control** | GitHub |
-
+| **Collaboration & Documentation** | JIRA & Confluence |
 ---
 
 ## 🏗️ Architecture Overview
@@ -48,78 +46,9 @@ RideShare enables drivers to post ride offers and passengers to search and book 
 | **Ride Service** | Ride posting, searching, booking, matching |
 | **Payment Service** | Transaction processing, billing, receipts |
 
-**React.js Frontend** — A single-page application that communicates with the backend microservices via RESTful APIs, providing a responsive and dynamic user experience.
+**React.js Frontend** — A web app application that communicates with the backend microservices via RESTful APIs, providing a responsive and dynamic user experience.
 
 **API Gateway** — Routes all client requests to appropriate microservices, centralizing authentication and security.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Java 11 or higher
-- Node.js 18+ and npm
-- PostgreSQL 14 or higher
-- Maven 3.6+
-- Git
-
-### Backend Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/chiragrawat12/RideShare.git
-cd RideShare
-
-# Configure PostgreSQL connection in application.properties
-# spring.datasource.url=jdbc:postgresql://localhost:5432/rideshare
-# spring.datasource.username=your_username
-# spring.datasource.password=your_password
-
-# Build and run the backend
-mvn clean install
-mvn spring-boot:run
-```
-
-### Frontend Setup
-
-```bash
-# Navigate to the frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
-```
-
-The React app will be available at `http://localhost:3000` and the backend API at `http://localhost:8080`.
-
-### Database Setup
-
-```bash
-# Create the PostgreSQL database
-psql -U postgres
-CREATE DATABASE rideshare;
-```
-
-Spring Boot will auto-generate the schema via JPA/Hibernate on first run.
-
----
-
-## 📊 Database Schema
-
-Key entities managed in PostgreSQL:
-
-| Entity | Description |
-|--------|-------------|
-| **User** | Stores driver and passenger information |
-| **HostDriver** | Driver-specific details (license, verification status) |
-| **Ride** | Ride offers posted by drivers |
-| **Booking** | Passenger bookings for rides |
-| **Payment** | Transaction records |
-| **Rating** | User ratings and reviews |
 
 ---
 
@@ -144,7 +73,7 @@ Key entities managed in PostgreSQL:
 
 ## 👥 Team
 
-**Project:** SOLID Four (CS6451 — Advanced Software Design)
+**Module Name:** CS6652 — Advanced Software Architectures
 
 | Name | Student ID | Role |
 |------|-----------|------|
@@ -153,30 +82,4 @@ Key entities managed in PostgreSQL:
 | Gladwin Dominic Joseph | 25040758 | Architect & Designer |
 | Kiran Kidecha | 25030965 | Business Analyst & DevOps |
 
-**Instructor:** Professor J.J Collins
-
----
-
-## 🚀 Future Enhancements
-
-- Advanced driver-passenger matching algorithm
-- Real-time GPS tracking with live map updates
-- Referral program and loyalty rewards
-- Multiple payment gateway integration
-- SOS/Emergency contact system
-- Ride prioritization and preferences
-- Mobile app (iOS/Android)
-
----
-
-## 📄 License
-
-This project is a university assignment and is available for educational purposes.
-
----
-
-## 📧 Contact
-
-For questions or contributions, please reach out through the GitHub repository.
-
-**Repository:** [https://github.com/chiragrawat12/RideShare](https://github.com/chiragrawat12/RideShare)
+**Instructor:** Professor Salim Saay
