@@ -42,6 +42,15 @@ public class Payment {
     @Column(name = "transaction_reference")
     private String transactionReference;
 
+    @Column(name = "stripe_payment_intent_id")
+    private String stripePaymentIntentId;
+
+    @Column(name = "stripe_refund_id")
+    private String stripeRefundId;
+
+    @Column(name = "stripe_client_secret")
+    private String stripeClientSecret;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
