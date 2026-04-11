@@ -13,4 +13,7 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
     Optional<Payment> findByBookingId(Long bookingId);
     List<Payment> findByPayerUserId(Long payerUserId);
     List<Payment> findByStatus(PaymentStatus status);
+
+    // NEW: Find by Stripe PaymentIntent ID (used by webhook handler)
+    Optional<Payment> findByStripePaymentIntentId(String stripePaymentIntentId);
 }
