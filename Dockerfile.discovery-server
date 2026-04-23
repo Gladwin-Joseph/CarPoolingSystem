@@ -15,7 +15,7 @@ COPY api-gateway/pom.xml api-gateway/
 COPY discovery-server/src discovery-server/src
 
 # Build only discovery-server
-RUN mvn -pl discovery-server -am clean package -DskipTests
+RUN mvn -pl discovery-server -am clean package -Dmaven.test.skip=true
 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app

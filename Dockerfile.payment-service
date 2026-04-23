@@ -15,7 +15,7 @@ COPY api-gateway/pom.xml api-gateway/
 COPY payment-service/src payment-service/src
 
 # Build only payment-service
-RUN mvn -pl payment-service -am clean package -DskipTests
+RUN mvn -pl payment-service -am clean package -Dmaven.test.skip=true
 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
