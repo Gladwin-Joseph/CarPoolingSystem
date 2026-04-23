@@ -15,7 +15,7 @@ COPY api-gateway/pom.xml api-gateway/
 COPY user-service/src user-service/src
 
 # Build only user-service
-RUN mvn -pl user-service -am clean package -DskipTests
+RUN mvn -pl user-service -am clean package -Dmaven.test.skip=true
 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
