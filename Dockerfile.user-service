@@ -1,10 +1,20 @@
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
+# Copy root pom
 COPY pom.xml .
+
+# Copy ALL module pom.xml files so Maven can resolve the parent structure
+COPY discovery-server/pom.xml discovery-server/
 COPY user-service/pom.xml user-service/
+COPY ride-service/pom.xml ride-service/
+COPY payment-service/pom.xml payment-service/
+COPY api-gateway/pom.xml api-gateway/
+
+# Copy only user-service source
 COPY user-service/src user-service/src
 
+# Build only user-service
 RUN mvn -pl user-service -am clean package -DskipTests
 
 FROM eclipse-temurin:21-jre-alpine
