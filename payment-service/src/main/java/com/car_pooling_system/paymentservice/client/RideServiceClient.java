@@ -9,9 +9,9 @@ import java.util.Map;
 @FeignClient(name = "ride-service", fallback = RideServiceClientFallback.class)
 public interface RideServiceClient {
 
-    @GetMapping("/api/rides/bookings/{bookingId}")
+    @GetMapping("/rides/bookings/{bookingId}")
     Map<String, Object> getBookingById(@PathVariable("bookingId") Long bookingId);
 
-    @GetMapping("/api/rides/{rideId}")
+    @GetMapping("/rides/{rideId}")
     Map<String, Object> getRideById(@PathVariable("rideId") Long rideId);
 }

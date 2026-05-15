@@ -18,7 +18,6 @@ public class PaymentResponse {
     private String paymentMethod;
     private String status;
     private String transactionReference;
-    private String stripePaymentIntentId;
-    private String stripeRefundId;
     private LocalDateTime paymentDate;
+    private String stripeClientSecret;   // ← NEW
 }

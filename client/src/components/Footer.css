@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 100px;
+  border-top: 1px solid var(--line);
+  background: var(--paper-warm);
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-mark {
+  font-size: 48px;
+  line-height: 0.8;
+  color: var(--accent);
+}
+.footer-title { font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+.footer-sub { font-size: 13px; color: var(--slate); margin-top: 2px; }
+
+.footer-meta {
+  font-size: 11px;
+  color: var(--slate);
+  letter-spacing: 0.05em;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dot-sep { opacity: 0.4; }

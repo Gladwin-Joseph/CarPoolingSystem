@@ -1,0 +1,117 @@
+.profile-page { padding-bottom: 80px; }
+
+.profile-hero {
+  padding: 60px 0;
+  background: var(--paper-warm);
+  border-bottom: 1px solid var(--line);
+}
+.profile-hero .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.profile-id-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.avatar {
+  width: 88px;
+  height: 88px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.profile-name {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 8px 0 14px;
+}
+.profile-tags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.profile-uid {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--slate);
+}
+.profile-rating {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.profile-body { padding: 60px 0; }
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.profile-card {
+  padding: 32px;
+}
+.profile-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.profile-card-num {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.profile-card-head h2 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.profile-field-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 8px 0;
+}
+
+.profile-edit-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 768px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .avatar { width: 64px; height: 64px; font-size: 28px; }
+}
