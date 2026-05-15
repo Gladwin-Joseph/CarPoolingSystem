@@ -8,11 +8,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class StripeConfig {
 
-    @Value("sk_test_51TQ8UW2fQwmzlPc0HQ50sNJg4rxYYbjezp682eknOnu67Kv4IFIJk5tj7LgZM2Zf1rpAscohTjhxdPnNvcOAsUeX00LAVtNqsi")
+    @Value("${stripe.secret.key}")
     private String secretKey;
 
     @PostConstruct
     public void init() {
+        if (secretKey == null || secretKey.isBlank()) {
+            throw new IllegalStateException("Missing Stripe secret key");
+        }
         Stripe.apiKey = secretKey;
     }
 }
