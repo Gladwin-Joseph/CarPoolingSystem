@@ -10,10 +10,10 @@ import java.util.Map;
 @FeignClient(name = "user-service", fallback = UserServiceClientFallback.class)
 public interface UserServiceClient {
 
-    @GetMapping("/users/verify/{userId}")
+    @GetMapping("/api/users/verify/{userId}")
     Map<String, Object> verifyUser(@PathVariable("userId") Long userId,
                                    @RequestParam("userType") String userType);
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/api/users/{id}")
     Map<String, Object> getUserById(@PathVariable("id") Long id);
 }
